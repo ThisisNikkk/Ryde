@@ -7,7 +7,7 @@ export default function NonAuthStack() {
   const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name={AppRoutes.Home} component={Home} />
+      <Stack.Screen name={AppRoutes.Home} component={Home} options={{ animation: 'flip' }} />
     </Stack.Navigator>
   );
 }

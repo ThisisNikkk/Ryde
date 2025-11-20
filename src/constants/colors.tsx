@@ -4,10 +4,23 @@ const LightTheme = {
   colors: {
     ...DefaultTheme.colors,
     background: "white",
-    text: "black",
+    text: "#101520",
+    primary: "#0286FF",
+    opacityText: '#858585',
   },
   images: {
     logo: require("../assets/logo.png"),
+    ob1: require('../assets/onboarding1.png'),
+    ob2: require('../assets/onboarding2.png'),
+    ob3: require('../assets/onboarding3.png'),
+    getStarted: require('../assets/get-started.png'),
+    google: require('../assets/google.png'),
+    person: require('../assets/person.png'),
+    mail: require('../assets/email.png'),
+    lock: require('../assets/lock.png'),
+    eye: require('../assets/eyecross.png'),
+
+
   },
 };
 
@@ -15,11 +28,22 @@ const DarkTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    background: "black",
-    text: "white",
+    background: "white",
+    text: "#101520",
+    primary: "#0286FF",
+    opacityText: '#858585',
   },
   images: {
-    logo: require("../assets/logodark.jpg"),
+    logo: require("../assets/logo.png"),
+    ob1: require('../assets/onboarding1.png'),
+    ob2: require('../assets/onboarding2.png'),
+    ob3: require('../assets/onboarding3.png'),
+    getStarted: require('../assets/get-started.png'),
+    google: require('../assets/google.png'),
+    person: require('../assets/person.png'),
+    mail: require('../assets/email.png'),
+    lock: require('../assets/lock.png'),
+    eye: require('../assets/eyecross.png'),
   },
 };
 export { LightTheme, DarkTheme };

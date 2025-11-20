@@ -10,6 +10,7 @@ import {
   Image,
 } from "react-native";
 import SolidText from "./SolidText";
+import AppFonts from "../../constants/fonts";
 
 interface SolidBtnProps {
   btnStyle?: ViewStyle;
@@ -54,16 +55,17 @@ const style = (colors: any) => StyleSheet.create({
   btn: {
     justifyContent: "center",
     alignItems: "center",
-    width: "80%",
+    width: 343,
     alignSelf: "center",
-    paddingVertical: 12,
+    height: 56,
     marginTop: 20,
-    borderRadius: 8,
+    borderRadius: 100,
     backgroundColor: colors.primary, flexDirection: 'row'
   },
   btntxt: {
-    fontSize: 16,
+    fontSize: 17,
     color: "white",
+    fontFamily: AppFonts.Bold
   },
   disabled: {
     backgroundColor: '#B0B0B0',

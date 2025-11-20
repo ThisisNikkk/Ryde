@@ -3,6 +3,8 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import SolidView from "../components/SolidView";
 import SolidText from "../components/SolidText";
+import { setAuth } from "../../redux/Reducers/userData";
+import { useDispatch } from "react-redux";
 
 interface HomeProps {
   navigation: any;
@@ -10,12 +12,14 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ navigation }) => {
   const { colors, images } = useTheme();
-
+  const dispatch = useDispatch();
   return (
     <SolidView
       viewStyle={styles.parent}
       view={
-        <SolidText variant='bold' style={{alignSelf:'center'}}>
+        <SolidText
+         onPress={() => dispatch(setAuth(false))}
+         variant='bold' style={{alignSelf:'center'}}>
           {"Welcome Home\nSolidAppMaker"}
         </SolidText>
       }
@@ -26,7 +30,8 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
 const styles = StyleSheet.create({
   parent: {
     flex: 1,
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor:'black',
   }
 });
 

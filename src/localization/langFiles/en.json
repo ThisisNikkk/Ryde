@@ -2,6 +2,25 @@
     "appkeys": {
         "welcome": "Welcome",
         "welcome_solid" : "Welcome\nSolidAppMaker",
-        "go_home" : "Go Home"
+        "go_home" : "Go Home",
+        "Ob1":"The best car in your \nhands with Ryde",
+        "Ob2":"The perfect ride is \njust a tap away!",
+        "Ob3":"Your ride, your way. \nLet's get started!",
+        "ob1":"Discover the convenience of finding\n your perfect ride with our Ryde App",
+        "ob2":"Your journey begins with Ryde.\n Find your ideal ride effortlessly.",
+        "ob3":"Enter your destination, sit back, and\n let us take care of the rest.",
+        "getStarted":"Let’s get started",
+        "getStartedDes":"Sign up or log in to find out the best\n car for you",
+        "Or":"Or",
+        "DontAccount":"Don’t have an account? ",
+        "AlreadyAccount":"Already have an account? ",
+        "LogIn":"Log in",
+        "SignUp":"Sign Up",
+        "Google":"Log In with Google",
+        "createAccount":"Create Your  Account",
+        "Name":"Name",
+        "Email":"Email",
+        "Password":"Password",
+        "Welcome":"Welcome 👋",
     }
 }
