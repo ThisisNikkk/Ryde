@@ -62,7 +62,7 @@ const Welcome: React.FC = ({ navigation }: any) => {
             <SolidText style={[style.footerText, { color: 'rgba(133, 133, 133, 1)' }]}>{localization.appkeys?.AlreadyAccount}
               <SolidText
                 onPress={handleLogin}
-                style={{ fontFamily: AppFonts.SemiBold, color: colors.primary }}>
+                style={{ fontFamily: AppFonts.SemiBold, color: colors.primary, fontSize: AppUtils.fontSize(17) }}>
                 {localization.appkeys?.LogIn}
               </SolidText>
             </SolidText>
@@ -131,7 +131,7 @@ const style = StyleSheet.create({
   googleBtn: {
     justifyContent: "center",
     alignItems: "center",
-    width: 343,
+    width: 327,
     alignSelf: "center",
     height: 56,
     borderRadius: 100,

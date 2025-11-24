@@ -55,7 +55,7 @@ const SignUp = ({ navigation }: any) => {
                     keyboardVerticalOffset={isKeyboardVisible ? (Platform.OS === 'ios' ? 0 : 0) : Platform.OS === 'ios' ? 0 : -40}
                 >
                     <View style={{ flex: 1 }}>
-                        <View style={{ flex: 0.44 }}>
+                        <View style={{ flex: 0.4 }}>
                             <FastImage source={images.getStarted} style={style.img} resizeMode="cover" />
                             <LinearGradient
                                 colors={['rgba(255,255,255,0)', '#FFFFFF']}
@@ -70,7 +70,7 @@ const SignUp = ({ navigation }: any) => {
                             <SolidText style={[style.titleText, { color: colors.text }]}>{localization.appkeys?.createAccount}</SolidText>
                         </View>
                         <View style={{ flex: 1, backgroundColor: colors.background }}>
-                            <View style={{ gap: 16 }}>
+                            <View style={{ gap: 16, marginTop: hp(2) }}>
                                 <SolidInput
                                     placeholder="Enter Name"
                                     title={localization.appkeys?.Name}
@@ -107,7 +107,7 @@ const SignUp = ({ navigation }: any) => {
                             <SolidText style={[style.footerText, { color: 'rgba(133, 133, 133, 1)' }]}>{localization.appkeys?.AlreadyAccount}
                                 <SolidText
                                     onPress={handleLogin}
-                                    style={{ fontFamily: AppFonts.SemiBold, color: colors.primary }}>
+                                    style={{ fontFamily: AppFonts.SemiBold, color: colors.primary, fontSize: AppUtils.fontSize(17) }}>
                                     {localization.appkeys?.LogIn}
                                 </SolidText>
                             </SolidText>
@@ -129,7 +129,7 @@ const style = StyleSheet.create({
         textAlign: "left",
         fontFamily: AppFonts.Bold,
         position: 'absolute',
-        left: wp(7),
+        left: wp(4),
         top: hp(21),
         letterSpacing: 0.1
     },
@@ -167,7 +167,7 @@ const style = StyleSheet.create({
     googleBtn: {
         justifyContent: "center",
         alignItems: "center",
-        width: 343,
+        width: 327,
         alignSelf: "center",
         height: 56,
         borderRadius: 100,

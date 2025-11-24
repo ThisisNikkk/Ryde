@@ -19,6 +19,9 @@ const LightTheme = {
     mail: require('../assets/email.png'),
     lock: require('../assets/lock.png'),
     eye: require('../assets/eyecross.png'),
+    backMap: require('../assets/Back.png'),
+    search: require('../assets/SearchBlack.png'),
+    filter: require('../assets/filter.png'),
 
 
   },
@@ -44,6 +47,9 @@ const DarkTheme = {
     mail: require('../assets/email.png'),
     lock: require('../assets/lock.png'),
     eye: require('../assets/eyecross.png'),
+    backMap: require('../assets/Back.png'),
+    search: require('../assets/SearchBlack.png'),
+    filter: require('../assets/filter.png'),
   },
 };
 export { LightTheme, DarkTheme };

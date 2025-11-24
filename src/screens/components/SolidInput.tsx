@@ -58,7 +58,7 @@ const SolidInput: React.FC<SolidInputProps> = ({
 
 const style = (colors: any) => StyleSheet.create({
   mainContainer: {
-    width: 340,
+    width: 327,
     alignSelf: 'center',
   },
   inputContainer: {

@@ -14,16 +14,18 @@ import { hp, wp } from "../../utils/dimension";
 import SolidInput from "../components/SolidInput";
 import { useDispatch } from "react-redux";
 import { setAuth } from "../../redux/Reducers/userData";
+import CustomModal from "../modals/CustomModal";
 
 const Login = ({ navigation }: any) => {
     const { colors, images }: any = useTheme();
     const { localization }: any = useContext(LocalizationContext);
+    // const [isModalVisible, setModalVisible] = useState(false);
     const dispatch = useDispatch();
 
     const handlePress = () => {
         dispatch(setAuth(true)),
             navigation.navigate(AppRoutes.NonAuthStack, {
-                screen: AppRoutes.Home
+                screen: AppRoutes.Map
             });
     }
     const handleSignUp = () => {
@@ -56,7 +58,7 @@ const Login = ({ navigation }: any) => {
                     keyboardVerticalOffset={isKeyboardVisible ? (Platform.OS === 'ios' ? 0 : 0) : Platform.OS === 'ios' ? 0 : -40}
                 >
                     <View style={{ flex: 1 }}>
-                        <View style={{ flex: 0.44 }}>
+                        <View style={{ flex: 0.5 }}>
                             <FastImage source={images.getStarted} style={style.img} resizeMode="cover" />
                             <LinearGradient
                                 colors={['rgba(255,255,255,0)', '#FFFFFF']}
@@ -103,12 +105,29 @@ const Login = ({ navigation }: any) => {
                             <SolidText style={[style.footerText, { color: 'rgba(133, 133, 133, 1)' }]}>{localization.appkeys?.DontAccount}
                                 <SolidText
                                     onPress={handleSignUp}
-                                    style={{ fontFamily: AppFonts.SemiBold, color: colors.primary }}>
+                                    style={{ fontFamily: AppFonts.SemiBold, color: colors.primary, fontSize: AppUtils.fontSize(17) }}>
                                     {localization.appkeys?.SignUp}
                                 </SolidText>
                             </SolidText>
                         </View>
                     </View>
+
+
+                    {/* <CustomModal
+                        isVisible={isModalVisible}
+                        onClose={() => setModalVisible(false)}
+                        mainText={localization.appkeys?.PasswordTitle}
+                        Subtext={localization.appkeys?.PasswordDes}
+                        headImg={images.green}
+                        firstBtn={true}
+                        btnTxtFirst={localization.appkeys?.continue}
+                        onSubmitYes={() => {
+                            navigation.navigate(AppRoutes.NonAuthStack, {
+                                screen: AppRoutes.Map
+                            });
+                            setModalVisible(false);
+                        }}
+                    /> */}
                 </KeyboardAvoidingView>
             }
         />
@@ -163,7 +182,7 @@ const style = StyleSheet.create({
     googleBtn: {
         justifyContent: "center",
         alignItems: "center",
-        width: 343,
+        width: 327,
         alignSelf: "center",
         height: 56,
         borderRadius: 100,
