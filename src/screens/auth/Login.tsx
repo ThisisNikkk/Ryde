@@ -25,7 +25,7 @@ const Login = ({ navigation }: any) => {
     const handlePress = () => {
         dispatch(setAuth(true)),
             navigation.navigate(AppRoutes.NonAuthStack, {
-                screen: AppRoutes.Map
+                screen: AppRoutes.Home
             });
     }
     const handleSignUp = () => {

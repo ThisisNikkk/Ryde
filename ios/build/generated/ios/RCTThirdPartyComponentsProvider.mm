@@ -22,6 +22,10 @@
     thirdPartyComponents = @{
 		@"FastImageView": NSClassFromString(@"FFFastImageViewComponentView"), // @d11/react-native-fast-image
 		@"RNDateTimePicker": NSClassFromString(@"RNDateTimePickerComponentView"), // @react-native-community/datetimepicker
+		@"RNMapsGoogleMapView": NSClassFromString(@"RNMapsGoogleMapView"), // react-native-maps
+		@"RNMapsGooglePolygon": NSClassFromString(@"RNMapsGooglePolygonView"), // react-native-maps
+		@"RNMapsMapView": NSClassFromString(@"RNMapsMapView"), // react-native-maps
+		@"RNMapsMarker": NSClassFromString(@"RNMapsMarkerView"), // react-native-maps
 		@"RNCViewPager": NSClassFromString(@"RNCPagerViewComponentView"), // react-native-pager-view
 		@"RNCSafeAreaProvider": NSClassFromString(@"RNCSafeAreaProviderComponentView"), // react-native-safe-area-context
 		@"RNCSafeAreaView": NSClassFromString(@"RNCSafeAreaViewComponentView"), // react-native-safe-area-context
