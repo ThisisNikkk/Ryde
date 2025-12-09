@@ -10,6 +10,7 @@ import MapView, { Marker, PROVIDER_DEFAULT, PROVIDER_GOOGLE } from 'react-native
 import AppFonts from "../../constants/fonts";
 import SolidView from "../components/SolidView";
 import AppRoutes from "../../routes/RouteKeys/appRoutes";
+import RideCard from "../components/RideCard";
 
 interface HomeProps {
   navigation: any;
@@ -42,14 +43,19 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
   );
 
   const renderSearchBar = () => (
-    <View style={styles.searchContainer}>
+    <TouchableOpacity
+      style={styles.searchContainer}
+      onPress={() => navigation.navigate(AppRoutes.Ride)}
+    >
       <SolidInput
         placeholder="Where do you want to go?"
         leftImg={require('../../assets/search.png')}
         viewStyle={{ width: '100%' }}
         textInputStyle={{ fontSize: 14, fontFamily: AppFonts.Medium }}
+        editable={false}
+        pointerEvents="none"
       />
-    </View>
+    </TouchableOpacity>
   );
 
   const renderMapSection = () => (
@@ -94,40 +100,14 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
       <SolidText style={styles.sectionTitle}>
         Recent Rides
       </SolidText>
-      <View style={styles.rideCard}>
-        <View style={styles.rideHeaderRow}>
-          <Image source={images.miniMap} style={styles.rideMapThumb} />
-          <View style={styles.rideLocInfo}>
-            <View style={styles.routeRow}>
-              <Image source={require('../../assets/to.png')} style={styles.routeIcon} />
-              <SolidText style={styles.addressText}>1901 Thornridge Cir. Shiloh</SolidText>
-            </View>
-            <View style={styles.routeRow}>
-              <Image source={require('../../assets/pin.png')} style={styles.routeIcon} />
-              <SolidText style={styles.addressText}>4140 Parker Rd. Allentown</SolidText>
-            </View>
-          </View>
-        </View>
-
-        <View style={styles.divider} />
-
-        <View style={styles.rideDetailsRow}>
-          <SolidText style={styles.detailLabel}>Date & Time</SolidText>
-          <SolidText style={styles.detailValue}>16 July 2023, 10:30 PM</SolidText>
-        </View>
-        <View style={styles.rideDetailsRow}>
-          <SolidText style={styles.detailLabel}>Driver</SolidText>
-          <SolidText style={styles.detailValue}>Jane Cooper</SolidText>
-        </View>
-        <View style={styles.rideDetailsRow}>
-          <SolidText style={styles.detailLabel}>Car seats</SolidText>
-          <SolidText style={styles.detailValue}>4</SolidText>
-        </View>
-        <View style={styles.rideDetailsRow}>
-          <SolidText style={styles.detailLabel}>Payment Status</SolidText>
-          <SolidText style={[styles.detailValue, { color: 'lightgreen' }]}>Paid</SolidText>
-        </View>
-      </View>
+      <RideCard
+        date="16 July 2023, 10:30 PM"
+        driver="Jane Cooper"
+        seats={4}
+        status="Paid"
+        from="1901 Thornridge Cir. Shiloh"
+        to="4140 Parker Rd. Allentown"
+      />
     </View>
   );
 

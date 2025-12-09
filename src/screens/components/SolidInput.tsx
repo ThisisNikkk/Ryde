@@ -6,7 +6,7 @@ import AppUtils from "../../utils/appUtils";
 import { hp } from "../../utils/dimension";
 import AppFonts from "../../constants/fonts";
 
-interface SolidInputProps {
+interface SolidInputProps extends React.ComponentProps<typeof TextInput> {
   viewStyle?: object;
   textInputStyle?: object;
   placeholder?: string;
@@ -28,7 +28,8 @@ const SolidInput: React.FC<SolidInputProps> = ({
   leftImg,
   rightImg,
   isSecure,
-  onRightPress }) => {
+  onRightPress,
+  ...props }) => {
   const { colors }: any = useTheme();
   const styles = style(colors)
   return (
@@ -47,7 +48,9 @@ const SolidInput: React.FC<SolidInputProps> = ({
           secureTextEntry={isSecure}
           placeholderTextColor={colors.opacityText || '#858585'}
           placeholder={placeholder}
-          style={[styles.textInput, textInputStyle]} />
+          style={[styles.textInput, textInputStyle]}
+          {...props}
+        />
         {rightImg && <Pressable style={{ alignSelf: 'center' }} onPress={onRightPress}>
           <Image source={rightImg} style={[styles.imgStyle, { marginLeft: 8 }]} />
         </Pressable>}

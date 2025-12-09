@@ -8,7 +8,9 @@ const AppRoutes = {
     Home: "Home",
     Login: "Login",
     Map: "Map",
-    MembershipScreen:"MembershipScreen",
+    MembershipScreen: "MembershipScreen",
+    Ride: "Ride",
+    SelectRide: "SelectRide",
 }
 
 export default AppRoutes

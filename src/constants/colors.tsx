@@ -24,8 +24,9 @@ const LightTheme = {
     chat: require('../assets/chat.png'),
     profile: require('../assets/profile.png'),
     miniMap: require('../assets/miniMap.png'),
-
-
+    gallary: require('../assets/gallary.png'),
+    edit: require('../assets/edit.png'),
+    suv: require('../assets/suv.png'),
   },
 };
 
@@ -54,6 +55,10 @@ const DarkTheme = {
     chat: require('../assets/chat.png'),
     profile: require('../assets/profile.png'),
     miniMap: require('../assets/miniMap.png'),
+    gallary: require('../assets/gallary.png'),
+    edit: require('../assets/edit.png'),
+    suv: require('../assets/suv.png'),
+
   },
 };
 export { LightTheme, DarkTheme };

@@ -2,8 +2,11 @@ import React from "react";
 import { View, Image, Platform, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../../screens/nonAuth/Home";
+import History from "../../screens/nonAuth/History";
 import AppRoutes from "../RouteKeys/appRoutes";
 import { useTheme } from "@react-navigation/native";
+import Chat from "../../screens/nonAuth/Chat";
+import Profile from "../../screens/nonAuth/Profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -35,8 +38,8 @@ export default function BottomTabNavigator() {
                 }}
             />
             <Tab.Screen
-                name='Rides'
-                component={Home}
+                name='History'
+                component={History}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <View style={[styles.iconContainer, focused && styles.activeIconContainer]}>
@@ -50,7 +53,7 @@ export default function BottomTabNavigator() {
             />
             <Tab.Screen
                 name='Chats'
-                component={Home}
+                component={Chat}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <View style={[styles.iconContainer, focused && styles.activeIconContainer]}>
@@ -64,7 +67,7 @@ export default function BottomTabNavigator() {
             />
             <Tab.Screen
                 name='Profile'
-                component={Home}
+                component={Profile}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <View style={[styles.iconContainer, focused && styles.activeIconContainer]}>
